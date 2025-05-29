@@ -1,0 +1,63 @@
+{
+  "personal": {
+    "name": "Guy Hania",
+    "title": "Software developer, problem solver, and coffee enthusiast",
+    "description": "I'm Guy, a developer with a passion for building thoughtful, reliable applications. I enjoy solving complex problems and creating clean, scalable solutions that make a difference.",
+    "about": [
+      "I'm a passionate software developer with a strong focus on creating clean, efficient, and user-friendly applications. With experience in both frontend and backend development, I enjoy tackling complex problems and turning them into simple, beautiful solutions.",
+      "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while reading tech blogs."
+    ],
+    "social": {
+      "github": "https://github.com/guyhania",
+      "linkedin": "https://www.linkedin.com/in/guy-hania/"
+    },
+    "cv": "/cv.pdf"
+  },
+  "navigation": [
+    { "name": "About", "href": "#about" },
+    { "name": "Work", "href": "#work" },
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Contact", "href": "#contact" }
+  ],
+  "work": [
+    {
+      "company": "Qualish",
+      "title": "Fullstack Developer",
+      "period": "2020-2021",
+      "logo": "/qualish-logo.png"
+    },
+    {
+      "company": "Meitav Dash",
+      "title": "Software Developer",
+      "period": "2021-2022",
+      "logo": "/meitav-logo.png"
+    },
+    {
+      "company": "Change Healthcare",
+      "title": "Software Engineer",
+      "period": "2022-2023",
+      "logo": "/change-healthcare-logo.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project 1",
+      "description": "A brief description of project 1 and its key features.",
+      "link": "#"
+    },
+    {
+      "title": "Project 2",
+      "description": "A brief description of project 2 and its key features.",
+      "link": "#"
+    },
+    {
+      "title": "Project 3",
+      "description": "A brief description of project 3 and its key features.",
+      "link": "#"
+    }
+  ],
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out if you'd like to work together, have a question, or just want to say hello."
+  }
+} 

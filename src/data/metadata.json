@@ -63,19 +63,52 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": ["HTML", "JavaScript", "CSS", "SCSS", "TypeScript", "React", "Redux", "RTL", "Jest", "Cypress"]
+      "items": [
+        { "name": "HTML5", "icon": "html5" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "CSS", "icon": "css" },
+        { "name": "SCSS", "icon": "sass" },
+        { "name": "Tailwind", "icon": "tailwindcss" },
+        { "name": "TypeScript", "icon": "typescript" },
+        { "name": "React", "icon": "react" },
+        { "name": "Redux", "icon": "redux" },
+        { "name": "Jest", "icon": "jest" },
+        { "name": "Cypress", "icon": "cypress" }
+      ]
     },
     {
       "category": "Backend",
-      "items": ["Go", "C#", ".NET Core"]
+      "items": [
+        { "name": "Go", "icon": "go" },
+        { "name": "C#", "icon": "csharp" },
+        { "name": ".NET Core", "icon": "dotnet" }
+      ]
     },
     {
       "category": "Databases",
-      "items": ["SQL Server"]
+      "items": [
+        { "name": "SQL Server", "icon": "microsoftsqlserver" },
+        { "name": "MongoDB", "icon": "mongodb" }
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": [
+        { "name": "AWS", "icon": "amazonaws" },
+        { "name": "GCP", "icon": "googlecloud" },        
+        { "name": "GitHub Actions", "icon": "githubactions" },
+        { "name": "Jenkins", "icon": "jenkins" }
+      ]
     },
     {
       "category": "Tools & Platforms",
-      "items": ["Jira", "GIT", "Jenkins", "Webpack", "Figma", "Storybook"]
+      "items": [
+        { "name": "Jira", "icon": "jira" },
+        { "name": "Git", "icon": "git" },
+        { "name": "Webpack", "icon": "webpack" },
+        { "name": "Figma", "icon": "figma" },
+        { "name": "Storybook", "icon": "storybook" }
+      ]
     }
   ],
   "contact": {

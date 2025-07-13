@@ -12,6 +12,9 @@ const config: Config = {
       // padding: {
       //   2: 'calc(var(--spacing) * 2)', // will apply to .p-2, .px-2, .py-2, etc.
       // },
+      fontSize: {
+        '5xl': ['3rem', 'var(--line-height-5xl)'],
+      },
       colors: {
         zinc: {
           50: "var(--color-zinc-50)",

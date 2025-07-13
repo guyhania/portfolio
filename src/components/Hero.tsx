@@ -8,17 +8,16 @@ export function Hero() {
     const { personal } = metadata;
 
     return (
-        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-            <div className="max-w-7xl mx-auto text-center">
-                <h1 className="text-4xl sm:text-5xl tracking-tight md:text-6xl font-bold text-black dark:text-white mb-6">
+        <section className="flex items-center mb-12 px-4 sm:px-6 lg:px-12 max-w-7xl mt-32 relative w-full">
+            <div className="max-w-3xl mx-auto text-left ml-0 lg:px-12">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 mb-6">
                     {personal.title}
                 </h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg sm:text-xl text-zinc-600  mb-8 max-w-3xl mx-auto"
-                //dark:text-zinc-400
+                    className="text-base text-zinc-600 dark:text-zinc-400 mt-6 mb-8 max-w-3xl"            
                 >
                     {personal.description}
                 </motion.p>
@@ -27,7 +26,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex justify-center space-x-4"
+                    className="flex justify-start space-x-4"
                 >
                     <a
                         href={personal.social.github}

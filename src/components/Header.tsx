@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/Navbar"
 import { ThemeToggle } from "@/components/ThemeToggle"
+import { Avatar } from "@/components/Avatar"
 
 export function Header() {
   return (
@@ -11,6 +12,7 @@ export function Header() {
         <Navbar />
         <ThemeToggle />
       </div>
+      <Avatar />
     </header>
   )
 }

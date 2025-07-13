@@ -11,11 +11,12 @@
       "github": "https://github.com/guyhania",
       "linkedin": "https://www.linkedin.com/in/guy-hania/"
     },
-    "cv": "/cv.pdf"
+    "cv": "/assets/cv.pdf",
+    "avatar": "/assets/avatar.png"
   },
   "navigation": [
     { "name": "About", "href": "#about" },
-    { "name": "Work", "href": "#work" },
+    { "name": "Experience", "href": "#Experience" },
     { "name": "Projects", "href": "#projects" },
     { "name": "Contact", "href": "#contact" }
   ],
@@ -24,36 +25,57 @@
       "company": "Qualish",
       "title": "Fullstack Developer",
       "period": "2020-2021",
-      "logo": "/qualish-logo.png"
+      "logo": "/assets/logo-qualish.png"
     },
     {
       "company": "Meitav Dash",
-      "title": "Software Developer",
+      "title": "Fullstack .NET Developer",
       "period": "2021-2022",
-      "logo": "/meitav-logo.png"
+      "logo": "/assets/logo-meitav.svg"
     },
     {
       "company": "Change Healthcare",
-      "title": "Software Engineer",
+      "title": "Fullstack React Developer",
       "period": "2022-2023",
-      "logo": "/change-healthcare-logo.png"
+      "logo": "/assets/logo-change.png"
     }
   ],
   "projects": [
     {
       "title": "Project 1",
-      "description": "A brief description of project 1 and its key features.",
-      "link": "#"
+      "description": "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+      "link": "#",
+      "date": "September 5, 2022"
     },
     {
       "title": "Project 2",
-      "description": "A brief description of project 2 and its key features.",
-      "link": "#"
+      "description": "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
+      "link": "#",
+      "date": "September 2, 2022"
     },
     {
       "title": "Project 3",
-      "description": "A brief description of project 3 and its key features.",
-      "link": "#"
+      "description": "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
+      "link": "#",
+      "date": "July 14, 2022"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["HTML", "JavaScript", "CSS", "SCSS", "TypeScript", "React", "Redux", "RTL", "Jest", "Cypress"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Go", "C#", ".NET Core"]
+    },
+    {
+      "category": "Databases",
+      "items": ["SQL Server"]
+    },
+    {
+      "category": "Tools & Platforms",
+      "items": ["Jira", "GIT", "Jenkins", "Webpack", "Figma", "Storybook"]
     }
   ],
   "contact": {

@@ -31,7 +31,7 @@
       "company": "Meitav Dash",
       "title": "Fullstack .NET Developer",
       "period": "2021-2022",
-      "logo": "/assets/logo-meitav.svg"
+      "logo": "/assets/logo-meitav.png"
     },
     {
       "company": "Change Healthcare",
@@ -113,6 +113,6 @@
   ],
   "contact": {
     "title": "Contact",
-    "description": "Feel free to reach out if you'd like to work together, have a question, or just want to say hello."
+    "description": "Lets discuss the next big thing"
   }
 } 

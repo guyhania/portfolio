@@ -18,12 +18,12 @@ export function Contact() {
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center mb-4">
-            <MessageSquare className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white ml-2">
+            <MessageSquare className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+            <h2 className="text-3xl font-bold text-zinc-900 dark:text-white ml-2">
               {contact.title}
             </h2>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
             {contact.description}
           </p>
         </motion.div>
@@ -35,56 +35,68 @@ export function Contact() {
           viewport={{ once: true }}
           className="max-w-lg mx-auto"
         >
-          <form className="space-y-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white sm:text-sm"
-              />
+          <form action="https://formspree.io/f/xanbwezq" method="POST" className="space-y-6">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="block text-sm/6 font-semibold text-zinc-900 dark:text-white">
+                  Name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md bg-white dark:bg-zinc-800 px-3.5 py-2 text-base text-zinc-900 dark:text-white outline-1 -outline-offset-1 outline-zinc-300 dark:outline-zinc-700 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-zinc-600"
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm/6 font-semibold text-zinc-900 dark:text-white">
+                  Email
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    className="block w-full rounded-md bg-white dark:bg-zinc-800 px-3.5 py-2 text-base text-zinc-900 dark:text-white outline-1 -outline-offset-1 outline-zinc-300 dark:outline-zinc-700 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-zinc-600"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="subject" className="block text-sm/6 font-semibold text-zinc-900 dark:text-white">
+                  Subject
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    className="block w-full rounded-md bg-white dark:bg-zinc-800 px-3.5 py-2 text-base text-zinc-900 dark:text-white outline-1 -outline-offset-1 outline-zinc-300 dark:outline-zinc-700 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-zinc-600"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="message" className="block text-sm/6 font-semibold text-zinc-900 dark:text-white">
+                  Message
+                </label>
+                <div className="mt-2.5">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="block w-full rounded-md bg-white dark:bg-zinc-800 px-3.5 py-2 text-base text-zinc-900 dark:text-white outline-1 -outline-offset-1 outline-zinc-300 dark:outline-zinc-700 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-zinc-600"
+                    defaultValue={''}
+                  />
+                </div>
+              </div>
             </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white sm:text-sm"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white sm:text-sm"
-              />
-            </div>
-
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                className="block w-full rounded-md bg-zinc-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600"
               >
                 Send Message
               </button>

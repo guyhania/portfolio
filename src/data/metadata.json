@@ -85,7 +85,7 @@
       ]
     },
     {
-      "category": "Databases",
+      "category": "DB",
       "items": [
         { "name": "SQL Server", "icon": "microsoftsqlserver" },
         { "name": "MongoDB", "icon": "mongodb" }
@@ -112,7 +112,15 @@
     }
   ],
   "contact": {
-    "title": "Contact",
-    "description": "Lets discuss the next big thing"
+    "title": "Get in Touch",
+    "description": "Let's build something great together!",    
+    "details": {
+      "phone": "+972 50-9028409",
+      "email": "guyhania123@gmail.com"
+    },
+    "form": {
+      "endpoint": "https://formspree.io/f/xanbwezq",
+      "subject": "Portfolio Contact Form Submission"
+    }
   }
 } 

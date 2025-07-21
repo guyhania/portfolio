@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import metadata from '@/data/metadata.json';
 
 interface ProjectCardProps {
   project: {
@@ -29,7 +30,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             href={project.link}
             className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
           >
-            Read article
+            {metadata.ui.projectCard.readArticleText}
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
           </a>
         </CardFooter>

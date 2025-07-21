@@ -115,12 +115,109 @@
     "title": "Get in Touch",
     "description": "Let's build something great together!",    
     "details": {
-      "phone": "+972 50-9028409",
-      "email": "guyhania123@gmail.com"
+      "phone": "+972509028409",
+      "phoneFormatted": "+972 50-902-8409",
+      "phoneClean": "972509028409",
+      "email": "guyhania123@gmail.com",
+      "whatsapp": {
+        "message": "Hi Guy! I'm interested in discussing a project with you."
+      }
+    },
+    "actions": {
+      "copyPhone": "Copy phone number",
+      "callPhone": "Call phone number", 
+      "sendWhatsApp": "Send WhatsApp message",
+      "sendEmail": "Send email"
+    },
+    "messages": {
+      "phoneCopied": "Phone number copied!",
+      "copyFailed": "Failed to copy"
     },
     "form": {
       "endpoint": "https://formspree.io/f/xanbwezq",
-      "subject": "Portfolio Contact Form Submission"
+      "subject": "Portfolio Contact Form Submission",
+      "fields": {
+        "name": {
+          "placeholder": "Name",
+          "validation": "Name must be at least 2 characters"
+        },
+        "email": {
+          "placeholder": "Email",
+          "validation": "Please enter a valid email address"
+        },
+        "message": {
+          "placeholder": "Message",
+          "validation": "Message must be at least 10 characters"
+        }
+      },
+      "submitButton": "Send Message",
+      "messages": {
+        "success": "Message sent successfully!",
+        "error": "Failed to send message. Please try again."
+      }
+    },
+    "contactInfoTitle": "CONTACT INFO"
+  },
+  "ui": {
+    "avatar": {
+      "alt": "Avatar"
+    },
+    "projectCard": {
+      "readArticleText": "Read article"
+    },
+    "skills": {
+      "title": "Tech I",
+      "defaultCategory": "Frontend"
+    },
+    "themeToggle": {
+      "ariaLabel": "Toggle theme"
+    },
+    "workFooter": {
+      "downloadButton": "Download CV",
+      "viewButton": "View",
+      "downloadFilename": "Guy_Hania_CV.pdf",
+      "errorMessage": "Sorry, the CV file is not available at the moment. Please contact me directly."
+    },
+    "workHeader": {
+      "title": "Work"
+    },
+    "workItemLogo": {
+      "altSuffix": " logo"
+    },
+    "notFound": {
+      "errorCode": "404",
+      "title": "Page Not Found",
+      "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+      "buttons": {
+        "goHome": "Go Home",
+        "goBack": "Go Back"
+      }
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "successMessage": "Your message has been sent successfully!",
+      "responseTime": "I'll get back to you as soon as possible. Usually within 24 hours.",
+      "buttons": {
+        "backToHome": "Back to Home",
+        "sendAnother": "Send Another Message"
+      }
+    },
+    "footer": {
+      "sections": {
+        "navigation": "Navigation",
+        "quickLinks": "Quick Links"
+      },
+      "quickLinksItems": {
+        "downloadCV": "Download CV",
+        "getInTouch": "Get in Touch",
+        "viewProjects": "View Projects"
+      },
+      "copyright": "All rights reserved.",
+      "backToTop": "Back to top"
+    },
+    "map": {
+      "unavailable": "Map unavailable",
+      "apiKeyRequired": "API key required"
     }
   }
 } 

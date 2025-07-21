@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import metadata from "@/data/metadata.json";
+import { CustomMap } from "./CustomMap";
+import { ContactCard } from "./ContactCard";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.email({ message: "Please enter a valid email address" }),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, metadata.contact.form.fields.name.validation),
+  email: z.email({ message: metadata.contact.form.fields.email.validation }),
+  message: z.string().min(10, metadata.contact.form.fields.message.validation),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -43,55 +44,43 @@ export function Contact() {
 
       if (response.ok) {
         reset();
-        alert("Message sent successfully!");
+        alert(contact.form.messages.success);
       } else {
         throw new Error("Failed to send message");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again.");
+      alert(contact.form.messages.error);
     }
   };
   
   return (
-    <section id="contact" className="py-20 bg-zinc-50 dark:bg-zinc-900">
+    <section id="contact" className="flex items-center px-4 sm:px-6 lg:px-12 max-w-7xl mt-16 mb-16 relative w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-8"
         >
-          <h2 className="text-3xl font-bold dark:text-zinc-100 text-zinc-800 mb-4">
+          <h2 className="text-2xl font-bold dark:text-zinc-100 text-zinc-800">
             {contact.title}
           </h2>
-          <p className="text-zinc-400 text-lg max-w-xl">
+          <p className="text-zinc-400 max-w-xl">
             {contact.description}
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-32 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="lg:col-span-1"
           >
-         
-
-            <div>
-              <h3 className="text-zinc-500 dark:text-zinc-400 font-semibold text-sm tracking-wider uppercase mb-4">
-                CONTACT INFO
-              </h3>
-              <div className="space-y-2">
-                <p className="text-zinc-600 dark:text-zinc-400">{contact.details.phone}</p>
-                <p className="text-zinc-600 dark:text-zinc-400">{contact.details.email}</p>
-              </div>
-            </div>
-
-
+            <ContactCard />
           </motion.div>
 
           <motion.div
@@ -99,6 +88,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
+            className="lg:col-span-2"
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -107,8 +97,8 @@ export function Contact() {
                     {...register("name")}
                     id="name"
                     type="text"
-                    placeholder="Name"
-                    className="block w-full bg-transparent border-0 border-b border-zinc-700 text-white placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 transition-colors"
+                    placeholder={contact.form.fields.name.placeholder}
+                    className="block w-full bg-transparent border-0 border-b border-zinc-700 text-zinc-900 dark:text-zinc-400 placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 transition-colors"
                   />
                   {errors.name && (
                     <p className="mt-2 text-sm text-red-400">{errors.name.message}</p>
@@ -119,8 +109,8 @@ export function Contact() {
                     {...register("email")}
                     id="email"
                     type="email"
-                    placeholder="Email"
-                    className="block w-full bg-transparent border-0 border-b border-zinc-700 text-white placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 transition-colors"
+                    placeholder={contact.form.fields.email.placeholder}
+                    className="block w-full bg-transparent border-0 border-b border-zinc-700 text-zinc-900 dark:text-zinc-400 placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 transition-colors"
                   />
                   {errors.email && (
                     <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>
@@ -132,9 +122,9 @@ export function Contact() {
                 <textarea
                   {...register("message")}
                   id="message"
-                  rows={6}
-                  placeholder="Message"
-                  className="block w-full bg-transparent border-0 border-b border-zinc-700 text-white placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 resize-none transition-colors"
+                  rows={5}
+                  placeholder={contact.form.fields.message.placeholder}
+                  className="block w-full bg-transparent border-0 border-b border-zinc-700 text-zinc-600 dark:text-zinc-400 placeholder-zinc-500 py-3 px-0 focus:border-blue-400 focus:outline-none focus:ring-0 resize-none transition-colors"
                 />
                 {errors.message && (
                   <p className="mt-2 text-sm text-red-400">{errors.message.message}</p>
@@ -145,9 +135,9 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-white text-zinc-900 px-8 py-3 rounded-full font-semibold hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Message" : "Message"}
+                  {isSubmitting ? contact.form.submitButton : contact.form.submitButton}
                 </button>
               </div>
             </form>

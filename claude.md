@@ -60,6 +60,7 @@
 - Follow TypeScript strict mode guidelines
 - Prefer async/await
 - Follow the Airbnb Style Guide
+- All metadata including: labels, errors, etc will be contained inside metadata.json file and will not be hard coded in the code itself
 
 # Workflow
 - Run `npm run lint` before committing

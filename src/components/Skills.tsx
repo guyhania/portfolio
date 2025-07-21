@@ -8,7 +8,7 @@ import * as simpleIcons from 'simple-icons';
 
 export function Skills() {
   const { skills } = metadata;
-  const [activeCategory, setActiveCategory] = useState("Frontend");
+  const [activeCategory, setActiveCategory] = useState(metadata.ui.skills.defaultCategory);
 
   const categories = [...skills.map(category => category.category)];
 
@@ -24,7 +24,7 @@ export function Skills() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-8 flex items-center justify-center gap-2">
-            Tech I <Heart className="w-8 h-8 text-red-500" />
+            {metadata.ui.skills.title} <Heart className="w-8 h-8 text-red-500" />
           </h2>
 
           {/* Category Toggle Buttons */}
